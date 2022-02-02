@@ -1,4 +1,5 @@
 #include <SDL.h>
+#undef main
 #include <SDL_image.h>
 #include <SDL_mixer.h>
 #include "Constants.h"
