@@ -12,6 +12,9 @@ SDL_Window* g_window = nullptr;
 //function prototypes
 bool InitSDL();
 void CloseSDL();
+bool Update();
+
+
 
 bool InitSDL()
 {
@@ -51,17 +54,37 @@ void CloseSDL()
 	SDL_Quit();
 }
 
-int main()
+bool Update()
 {
-	if (InitSDL())
+	//Event handler
+	SDL_Event e;
+
+	//get events
+	SDL_PollEvent(&e);
+
+	//handle the events
+	switch (e.type)
 	{
-		SDL_Delay(5000);
+		//click the 'X' to quit
+	case SDL_QUIT:
+		return true;
+		break;
 	}
 
-	CloseSDL();
-
-	return 0;
+	return false;
 }
+
+int main()
+{
+	bool quit = false;
+
+	while (!quit)
+	{
+		quit = Update();
+	}
+}
+
+
 
 
 

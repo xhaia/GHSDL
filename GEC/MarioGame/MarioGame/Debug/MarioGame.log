@@ -1,3 +1,4 @@
 ﻿  Source.cpp
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Source.cpp(41): warning C4715: 'InitSDL': not all control paths return a value
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Source.cpp(72,28): warning C4060: switch statement contains no 'case' or 'default' labels
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Source.cpp(44): warning C4715: 'InitSDL': not all control paths return a value
   MarioGame.vcxproj -> F:\Game engine creation\GHSDL\GEC\MarioGame\Debug\MarioGame.exe
