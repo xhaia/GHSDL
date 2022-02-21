@@ -20,7 +20,6 @@ SDL_Texture* LoadTextureFromFile(string path);
 void FreeTexture();
 
 
-
 bool InitSDL()
 {
 	//Setup SDL
@@ -62,13 +61,13 @@ bool InitSDL()
 			return false;
 		}
 	}
-
 	//Load the background texture
 	g_texture = LoadTextureFromFile("Images/test");
 	if (g_texture == nullptr)
 	{
 		return false;
 	}
+
 }
 
 void CloseSDL() 
@@ -165,13 +164,20 @@ void FreeTexture()
 
 int main()
 {
-	bool quit = false;
-
-	while (!quit)
+	if (InitSDL())
 	{
-		Render();
-		quit = Update();
+		//flag to check if we wish to quit
+		bool quit = false;
+
+		//game loop
+		while (!quit)
+		{
+			Render();
+			quit = Update();
+		}
 	}
+
+	CloseSDL();
 }
 
 
