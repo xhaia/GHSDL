@@ -76,12 +76,19 @@ bool Update()
 
 int main()
 {
-	bool quit = false;
-
-	while (!quit)
+	if (InitSDL())
 	{
-		quit = Update();
+		//flag to check if we wish to quit
+		bool quit = false;
+
+		//game loop
+		while (!quit)
+		{
+			quit = Update();
+		}
 	}
+
+	CloseSDL();
 }
 
 
