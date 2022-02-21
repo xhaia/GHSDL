@@ -46,6 +46,7 @@ bool InitSDL()
 			return false;
 		}
 	}
+
 	g_renderer = SDL_CreateRenderer(g_window, -1, SDL_RENDERER_ACCELERATED);
 	if (g_renderer != nullptr)
 	{
@@ -134,20 +135,19 @@ SDL_Texture* LoadTextureFromFile(string path)
 	SDL_Surface* p_surface = IMG_Load(path.c_str());
 	if (p_surface != nullptr)
 	{
-
+		//create the texture from the pixels on the surface
+		p_texture = SDL_CreateTextureFromSurface(g_renderer, p_surface);
+		if (p_texture == nullptr)
+		{
+			cout << "Unable to create texture from surface. Error: " << SDL_GetError();
+		}
+		else
+		{
+			cout << "Unable to create texture from surface. Error: " << IMG_GetError();
+		}
+		//Remove the loaded surface now that we have a texture
+		SDL_FreeSurface(p_surface);
 	}
-	//create the texture from the pixels on the surface
-	p_texture = SDL_CreateTextureFromSurface(g_renderer, p_surface);
-	if (p_texture == nullptr)
-	{
-		cout << "Unable to create texture from surface. Error: " << SDL_GetError();
-	}
-	else
-	{
-		cout << "Unable to create texture from surface. Error: " << IMG_GetError();
-	}
-	//Remove the loaded surface now that we have a texture
-	SDL_FreeSurface(p_surface);
 
 	//return the texture
 	return p_texture;
