@@ -44,30 +44,29 @@ bool InitSDL()
 			cout << "Window was not created. Error: " << SDL_GetError();
 			return false;
 		}
-	}
 
-	g_renderer = SDL_CreateRenderer(g_window, -1, SDL_RENDERER_ACCELERATED);
-	if (g_renderer != nullptr)
-	{
-		//init PNG loading
-		int imageFlags = IMG_INIT_PNG;
-		if (!(IMG_Init(imageFlags) & imageFlags))
+		g_renderer = SDL_CreateRenderer(g_window, -1, SDL_RENDERER_ACCELERATED);
+		if (g_renderer != nullptr)
 		{
-			cout << "SDL_Image could not initialise. Error: " << IMG_GetError();
-			return false;
+			//init PNG loading
+			int imageFlags = IMG_INIT_PNG;
+			if (!(IMG_Init(imageFlags) & imageFlags))
+			{
+				cout << "SDL_Image could not initialise. Error: " << IMG_GetError();
+				return false;
+			}
 		}
 		else {
 			cout << "Renderer could not initialise. Error: " << SDL_GetError();
 			return false;
 		}
+		//Load the background texture
+		g_texture = LoadTextureFromFile("Images/test.bmp");
+		if (g_texture == nullptr)
+		{
+			return false;
+		}
 	}
-	//Load the background texture
-	g_texture = LoadTextureFromFile("Images/test");
-	if (g_texture == nullptr)
-	{
-		return false;
-	}
-
 }
 
 void CloseSDL() 
