@@ -35,7 +35,6 @@ bool Texture2D::LoadFromFile(std::string path)
 		}
 		else
 		{
-			cout << "Unable to create texture from surface. Error: " << IMG_GetError();
 			m_width = p_surface->w;
 			m_height = p_surface->h;
 		}
