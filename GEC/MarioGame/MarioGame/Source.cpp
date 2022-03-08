@@ -6,12 +6,15 @@
 #include <iostream>
 #include "Texture2D.h"
 #include "Commons.h"
+#include "GameScreenManager.h"
 using namespace std;
 
 //Globals
 SDL_Window* g_window = nullptr;
 SDL_Renderer* g_renderer = nullptr;
 Texture2D* g_texture = nullptr;
+GameScreenManager* game_screen_manager;
+Uint32 g_old_time;
 
 //function prototypes
 bool InitSDL();
@@ -61,14 +64,8 @@ bool InitSDL()
 		cout << "Renderer could not initialise. Error: " << SDL_GetError();
 		return false;
 	}
-	//Load the background texture
-	g_texture = new Texture2D(g_renderer);
 
-	if(!g_texture->LoadFromFile("Images/test.bmp"))
-	{
-		return false;
-	}
-
+	game_screen_manager->Render();
 }
 
 void CloseSDL() 
@@ -88,10 +85,16 @@ void CloseSDL()
 	//quit SLD subsystems
 	IMG_Quit();
 	SDL_Quit();
+
+	//Destroy the game screen manager
+	delete game_screen_manager;
+	game_screen_manager = nullptr;
 }
 
 bool Update()
 {
+	Uint32 new_time = SDL_GetTicks();
+
 	//Event handler
 	SDL_Event e;
 
@@ -106,6 +109,9 @@ bool Update()
 		return true;
 		break;
 	}
+
+	game_screen_manager->Update((float)(new_time - g_old_time) / 1000.0f, e);
+	g_old_time = new_time;
 
 	return false;
 }
@@ -126,6 +132,9 @@ int main()
 {
 	if (InitSDL())
 	{
+		game_screen_manager = new GameScreenManager(g_renderer, SCREEN_LEVEL1);
+		//set the time
+		g_old_time = SDL_GetTicks();
 		//flag to check if we wish to quit
 		bool quit = false;
 

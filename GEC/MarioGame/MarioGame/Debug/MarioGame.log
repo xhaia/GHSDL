@@ -1,6 +1,50 @@
-﻿  Source.cpp
+﻿  GameScreen.cpp
+  GameScreenLevel1.cpp
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenLevel1.cpp(7,1): error C2248: 'GameScreen::GameScreen': cannot access private member declared in class 'GameScreen'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(9): message : see declaration of 'GameScreen::GameScreen'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(5): message : see declaration of 'GameScreen'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenLevel1.cpp(7,1): error C2248: 'GameScreen::~GameScreen': cannot access private member declared in class 'GameScreen'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(10): message : see declaration of 'GameScreen::~GameScreen'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(5): message : see declaration of 'GameScreen'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenLevel1.cpp(12,1): error C2248: 'GameScreen::~GameScreen': cannot access private member declared in class 'GameScreen'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(10): message : see declaration of 'GameScreen::~GameScreen'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(5): message : see declaration of 'GameScreen'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenLevel1.cpp(27,39): error C2248: 'GameScreen::m_renderer': cannot access private member declared in class 'GameScreen'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(7): message : see declaration of 'GameScreen::m_renderer'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(5): message : see declaration of 'GameScreen'
+  GameScreenManager.cpp
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(14,35): error C2061: syntax error: identifier 'renderer'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(20,20): error C2061: syntax error: identifier 'SCREENS'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.cpp(5,53): error C2061: syntax error: identifier 'renderer'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.cpp(7,15): error C2065: 'renderer': undeclared identifier
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.cpp(8,15): error C2065: 'startScreen': undeclared identifier
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.cpp(14,25): error C2248: 'GameScreen::~GameScreen': cannot access private member declared in class 'GameScreen'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(14): message : compiler has generated 'GameScreen::~GameScreen' here
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(5): message : see declaration of 'GameScreen'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.cpp(20,27): error C2248: 'GameScreen::Render': cannot access private member declared in class 'GameScreen'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(12): message : see declaration of 'GameScreen::Render'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(5): message : see declaration of 'GameScreen'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.cpp(25,39): error C2248: 'GameScreen::Update': cannot access private member declared in class 'GameScreen'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(13): message : see declaration of 'GameScreen::Update'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(5): message : see declaration of 'GameScreen'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.cpp(28,38): error C2065: 'SCREENS': undeclared identifier
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.cpp(28,46): error C2146: syntax error: missing ')' before identifier 'new_screen'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.cpp(29,1): error C2143: syntax error: missing ';' before '{'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.cpp(29,1): error C2447: '{': missing function header (old-style formal list?)
+  Source.cpp
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(14,35): error C2061: syntax error: identifier 'renderer'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(20,20): error C2061: syntax error: identifier 'SCREENS'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Source.cpp(68,30): error C2248: 'GameScreenManager::Render': cannot access private member declared in class 'GameScreenManager'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(17): message : see declaration of 'GameScreenManager::Render'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(8): message : see declaration of 'GameScreenManager'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Source.cpp(68,31): error C2143: syntax error: missing ';' before ':'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Source.cpp(68,31): error C2059: syntax error: ':'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Source.cpp(90,28): error C2248: 'GameScreenManager::~GameScreenManager': cannot access private member declared in class 'GameScreenManager'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(22): message : compiler has generated 'GameScreenManager::~GameScreenManager' here
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(8): message : see declaration of 'GameScreenManager'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Source.cpp(113,73): error C2248: 'GameScreenManager::Update': cannot access private member declared in class 'GameScreenManager'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(18): message : see declaration of 'GameScreenManager::Update'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(8): message : see declaration of 'GameScreenManager'
+F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Source.cpp(135,59): error C2065: 'SCREEN_LEVEL1': undeclared identifier
   Texture2D.cpp
   Generating Code...
-H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Source.cpp(72): warning C4715: 'InitSDL': not all control paths return a value
-  LINK : H:\Game engine creation\GHSDL\GEC\MarioGame\Debug\MarioGame.exe not found or not built by the last incremental link; performing full link
-  MarioGame.vcxproj -> H:\Game engine creation\GHSDL\GEC\MarioGame\Debug\MarioGame.exe

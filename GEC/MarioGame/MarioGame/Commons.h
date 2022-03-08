@@ -14,6 +14,16 @@ struct Vector2D
 		y = initial_y;
 	}
 
+	enum SCREENS
+	{
+		SCREEN_INTRO,
+		SCREEM_MENU,
+		SCREEN_LEVEL1,
+		SCREEN_LEVEL2,
+		SCREEN_GAMEOVER,
+		SCREEN,HIGHSCORES,
+	};
+
 };
 
 
