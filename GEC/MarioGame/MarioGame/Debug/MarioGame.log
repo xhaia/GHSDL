@@ -1,45 +1,9 @@
-﻿  GameScreen.cpp
-  GameScreenLevel1.cpp
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenLevel1.cpp(7,1): error C2248: 'GameScreen::GameScreen': cannot access private member declared in class 'GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(11): message : see declaration of 'GameScreen::GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(7): message : see declaration of 'GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenLevel1.cpp(7,1): error C2248: 'GameScreen::~GameScreen': cannot access private member declared in class 'GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(12): message : see declaration of 'GameScreen::~GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(7): message : see declaration of 'GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenLevel1.cpp(12,1): error C2248: 'GameScreen::~GameScreen': cannot access private member declared in class 'GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(12): message : see declaration of 'GameScreen::~GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(7): message : see declaration of 'GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenLevel1.cpp(27,39): error C2248: 'GameScreen::m_renderer': cannot access private member declared in class 'GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(9): message : see declaration of 'GameScreen::m_renderer'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(7): message : see declaration of 'GameScreen'
-  GameScreenManager.cpp
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.cpp(14,25): error C2248: 'GameScreen::~GameScreen': cannot access private member declared in class 'GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(16): message : compiler has generated 'GameScreen::~GameScreen' here
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(7): message : see declaration of 'GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.cpp(20,27): error C2248: 'GameScreen::Render': cannot access private member declared in class 'GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(14): message : see declaration of 'GameScreen::Render'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(7): message : see declaration of 'GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.cpp(25,39): error C2248: 'GameScreen::Update': cannot access private member declared in class 'GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(15): message : see declaration of 'GameScreen::Update'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(7): message : see declaration of 'GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.cpp(33,26): error C2248: 'GameScreen::~GameScreen': cannot access private member declared in class 'GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(16): message : compiler has generated 'GameScreen::~GameScreen' here
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreen.h(7): message : see declaration of 'GameScreen'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.cpp(40,48): error C2248: 'GameScreenLevel1::GameScreenLevel1': cannot access private member declared in class 'GameScreenLevel1'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenLevel1.h(11): message : see declaration of 'GameScreenLevel1::GameScreenLevel1'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenLevel1.h(7): message : see declaration of 'GameScreenLevel1'
+﻿  GameScreenManager.cpp
+H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(13,13): error C2143: syntax error: missing ';' before '*'
+H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(13,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(13,31): error C2238: unexpected token(s) preceding ';'
   Source.cpp
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Source.cpp(70,30): error C2248: 'GameScreenManager::Render': cannot access private member declared in class 'GameScreenManager'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(17): message : see declaration of 'GameScreenManager::Render'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(8): message : see declaration of 'GameScreenManager'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Source.cpp(92,28): error C2248: 'GameScreenManager::~GameScreenManager': cannot access private member declared in class 'GameScreenManager'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(22): message : compiler has generated 'GameScreenManager::~GameScreenManager' here
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(8): message : see declaration of 'GameScreenManager'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Source.cpp(115,73): error C2248: 'GameScreenManager::Update': cannot access private member declared in class 'GameScreenManager'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(18): message : see declaration of 'GameScreenManager::Update'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(8): message : see declaration of 'GameScreenManager'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Source.cpp(137,73): error C2248: 'GameScreenManager::GameScreenManager': cannot access private member declared in class 'GameScreenManager'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(14): message : see declaration of 'GameScreenManager::GameScreenManager'
-F:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(8): message : see declaration of 'GameScreenManager'
-  Texture2D.cpp
+H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(13,13): error C2143: syntax error: missing ';' before '*'
+H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(13,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(13,31): error C2238: unexpected token(s) preceding ';'
   Generating Code...

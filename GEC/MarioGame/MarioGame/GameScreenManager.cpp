@@ -1,6 +1,13 @@
 #include "GameScreenManager.h"
 #include "GameScreen.h"
 #include "GameScreenLevel1.h"
+#include "Commons.h"
+#include <SDL.h>
+#include <SDL_image.h>
+#include <SDL_mixer.h>
+#ifndef _GAMESCREENMANAGER_H
+#define _GAMESCREENMANAGER_H
+using namespace std;
 
 GameScreenManager::GameScreenManager(SDL_Renderer* renderer, SCREENS startScreen) 
 {
@@ -43,3 +50,5 @@ void GameScreenManager::ChangeScreen(SCREENS new_screen)
 	default:;
 	}
 }
+
+#endif

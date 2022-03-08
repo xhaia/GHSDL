@@ -1,6 +1,11 @@
 #include "GameScreenLevel1.h"
 #include "Texture2D.h"
+#include <SDL.h>
 #include <iostream>
+#include "GameScreen.h"
+#ifndef _GAMESCREENLEVEL1_H
+#define _GAMESCREENLEVEL_H
+
 using namespace std;
 
 GameScreenLevel1::GameScreenLevel1(SDL_Renderer* renderer) : GameScreen(renderer)
@@ -31,3 +36,5 @@ bool GameScreenLevel1::SetUpLevel() {
 		return false;
 	}
 }
+
+#endif _GAMESCENELEVEL1_H

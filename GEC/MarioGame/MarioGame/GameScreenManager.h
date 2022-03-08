@@ -3,14 +3,16 @@
 #include <SDL_image.h>
 #include <SDL_mixer.h>
 #include "Commons.h"
-class GameScreen;
+#ifndef _GAMESCREENMANAGER_H
+#define _GAMESCREENMANAGER_H
 
 class GameScreenManager
 {
+private:
+		SDL_Renderer* m_renderer;
+		GameScreen* m_current_screen;
 
-	SDL_Renderer* m_renderer;
-	GameScreen* m_current_screen;
-
+public:
 	GameScreenManager(SDL_Renderer* renderer, SCREENS startScreen);
 	~GameScreenManager();
 
@@ -19,5 +21,8 @@ class GameScreenManager
 
 	void ChangeScreen(SCREENS new_screen);
 
+	class GameScreen;
 };
+
+#endif _GAMESCREENMANAGER_H
 
