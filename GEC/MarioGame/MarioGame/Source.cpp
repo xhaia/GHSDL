@@ -7,6 +7,8 @@
 #include "Texture2D.h"
 #include "Commons.h"
 #include "GameScreenManager.h"
+#include "GameScreen.h"
+
 using namespace std;
 
 //Globals
