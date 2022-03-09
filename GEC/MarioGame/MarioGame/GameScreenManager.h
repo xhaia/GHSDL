@@ -6,6 +6,8 @@
 #ifndef _GAMESCREENMANAGER_H
 #define _GAMESCREENMANAGER_H
 
+class GameScreen;
+
 class GameScreenManager
 {
 private:
@@ -21,7 +23,7 @@ public:
 
 	void ChangeScreen(SCREENS new_screen);
 
-	class GameScreen;
+	
 };
 
 #endif _GAMESCREENMANAGER_H

@@ -1,9 +1,7 @@
-﻿  GameScreenManager.cpp
-H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(13,13): error C2143: syntax error: missing ';' before '*'
-H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(13,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(13,31): error C2238: unexpected token(s) preceding ';'
-  Source.cpp
-H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(13,13): error C2143: syntax error: missing ';' before '*'
-H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(13,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenManager.h(13,31): error C2238: unexpected token(s) preceding ';'
-  Generating Code...
+﻿GameScreenLevel1.obj : error LNK2019: unresolved external symbol "public: __thiscall GameScreen::GameScreen(struct SDL_Renderer *)" (??0GameScreen@@QAE@PAUSDL_Renderer@@@Z) referenced in function "public: __thiscall GameScreenLevel1::GameScreenLevel1(struct SDL_Renderer *)" (??0GameScreenLevel1@@QAE@PAUSDL_Renderer@@@Z)
+GameScreenLevel1.obj : error LNK2019: unresolved external symbol "public: __thiscall GameScreen::~GameScreen(void)" (??1GameScreen@@QAE@XZ) referenced in function __unwindfunclet$??0GameScreenLevel1@@QAE@PAUSDL_Renderer@@@Z$0
+Source.obj : error LNK2019: unresolved external symbol "public: __thiscall GameScreenManager::GameScreenManager(struct SDL_Renderer *,enum SCREENS)" (??0GameScreenManager@@QAE@PAUSDL_Renderer@@W4SCREENS@@@Z) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "public: __thiscall GameScreenManager::~GameScreenManager(void)" (??1GameScreenManager@@QAE@XZ) referenced in function "public: void * __thiscall GameScreenManager::`scalar deleting destructor'(unsigned int)" (??_GGameScreenManager@@QAEPAXI@Z)
+Source.obj : error LNK2019: unresolved external symbol "public: void __thiscall GameScreenManager::Render(void)" (?Render@GameScreenManager@@QAEXXZ) referenced in function "bool __cdecl InitSDL(void)" (?InitSDL@@YA_NXZ)
+Source.obj : error LNK2019: unresolved external symbol "public: void __thiscall GameScreenManager::Update(float,union SDL_Event)" (?Update@GameScreenManager@@QAEXMTSDL_Event@@@Z) referenced in function "bool __cdecl Update(void)" (?Update@@YA_NXZ)
+H:\Game engine creation\GHSDL\GEC\MarioGame\Debug\MarioGame.exe : fatal error LNK1120: 6 unresolved externals
