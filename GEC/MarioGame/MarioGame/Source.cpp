@@ -122,6 +122,7 @@ bool Update()
 			return true;
 			break;
 		}
+
 	}
 
 	game_screen_manager->Update((float)(new_time - g_old_time) / 1000.0f, e);

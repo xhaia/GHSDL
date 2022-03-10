@@ -1,5 +1,6 @@
 #include "GameScreenLevel1.h"
 #include "Texture2D.h"
+#include "Collisions.h"
 #include <iostream>
 using namespace std;
 
@@ -13,8 +14,11 @@ GameScreenLevel1::~GameScreenLevel1()
 	delete m_background_texture;
 	m_background_texture = nullptr;
 
-	delete my_character;
-	my_character = nullptr;
+	delete Mario;
+	Mario = nullptr;
+
+	delete Luigi;
+	Luigi = nullptr;
 }
 
 void GameScreenLevel1::Render()
@@ -22,13 +26,21 @@ void GameScreenLevel1::Render()
 	//draw the background
 	m_background_texture->Render(Vector2D(), SDL_FLIP_NONE);
 
-	my_character->Render();
+	Mario->Render();
+	Luigi->Render();
 }
 
 void GameScreenLevel1::Update(float deltaTime, SDL_Event e)
 {
 	//Update character
-	my_character->Update(deltaTime, e);
+	Mario->Update(deltaTime, e);
+	Luigi->Update(deltaTime, e);
+
+
+	if (Collisions::Instance()->Circle(Mario, Luigi))
+	{
+		cout << "Circle hit!" << endl;
+	}
 }
 
 bool GameScreenLevel1::SetUpLevel()
@@ -42,5 +54,6 @@ bool GameScreenLevel1::SetUpLevel()
 	}
 
 	//set up player character
-	my_character = new Character(m_renderer, "Images/Mario.png", Vector2D(64, 330));
+	Mario = new CharacterMario(m_renderer, "Images/Mario.png", Vector2D(64, 330));
+	Luigi = new CharacterLuigi(m_renderer, "Images/Luigi.png", Vector2D(64, 330));
 }

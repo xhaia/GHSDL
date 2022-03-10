@@ -22,11 +22,19 @@ Character::Character(SDL_Renderer* renderer, string imagePath, Vector2D start_po
 	{
 		cout << "Failed to load character texture!" << endl;
 	}
+
+	m_collision_radius = 15.0f;
 }
+
 
 Character::~Character()
 {
 	m_renderer = nullptr;
+}
+
+float Character::GetCollisionRadius()
+{
+	return m_collision_radius;
 }
 
 void Character::Render()
@@ -77,62 +85,7 @@ void Character::MoveRight(float deltaTime)
 
 void Character::Update(float deltaTime, SDL_Event e)
 {
-	//deal with jumping first
-	if (m_jumping)
-	{
-		//adjust position
-		m_position.y -= m_jump_force * deltaTime;
-
-		//reduce jump force
-		m_jump_force -= JUMP_FORCE_DECREMENT * deltaTime;
-
-		//is jump force 0?
-		if (m_jump_force <= 0.0f)
-			m_jumping = false;
-	}
-	AddGravity(deltaTime);
-
-	if (m_moving_left)
-	{
-		MoveLeft(deltaTime);
-	}
-	else if (m_moving_right)
-	{
-		MoveRight(deltaTime);
-	}
-
-	//get events
-	SDL_PollEvent(&e);
-
-	switch (e.type)
-	{
-	case SDL_KEYDOWN:
-		switch (e.key.keysym.sym)
-		{
-		case SDLK_RIGHT:
-			m_moving_right = true;
-			break;
-		case SDLK_LEFT:
-			m_moving_left = true;
-			break;
-		case SDLK_UP:
-			if (m_can_jump)
-			{
-				Jump();
-			}
-		}
-		break;
-	case SDL_KEYUP:
-		switch (e.key.keysym.sym)
-		{
-		case SDLK_RIGHT:
-			m_moving_right = false;
-			break;
-		case SDLK_LEFT:
-			m_moving_left = false;
-			break;
-		}
-	}
+	
 }
 
 void Character::SetPosition(Vector2D new_position)

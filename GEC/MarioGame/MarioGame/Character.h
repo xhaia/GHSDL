@@ -30,6 +30,8 @@ protected:
 	bool m_can_jump;
 	float m_jump_force;
 
+	float m_collision_radius;
+
 public:
 	Character(SDL_Renderer* renderer, string imagePath, Vector2D start_position);
 	~Character();
@@ -39,7 +41,7 @@ public:
 	void SetPosition(Vector2D new_position);
 	Vector2D GetPosition();
 
-
+	float GetCollisionRadius();
 };
 
 #endif _CHARACTER_H
