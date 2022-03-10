@@ -1,3 +1,6 @@
-﻿  GameScreenLevel1.cpp
-H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\GameScreenLevel1.cpp(37): warning C4715: 'GameScreenLevel1::SetUpLevel': not all control paths return a value
+﻿  Character.cpp
+H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Constants.h(8,27): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Constants.h(9,21): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Constants.h(10,34): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+H:\Game engine creation\GHSDL\GEC\MarioGame\MarioGame\Constants.h(11,32): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   MarioGame.vcxproj -> H:\Game engine creation\GHSDL\GEC\MarioGame\Debug\MarioGame.exe
