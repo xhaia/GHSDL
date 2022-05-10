@@ -109,6 +109,7 @@ bool Update()
 
 	//handle the events
 	switch (e.type) {
+		//click the 'X' to quit
 	case SDL_QUIT:
 		return true;
 		break;
@@ -118,6 +119,7 @@ bool Update()
 		case SDLK_e:
 			SDL_Quit();
 			break;
+			//click the 'X' to quit
 		case SDL_QUIT:
 			return true;
 			break;
