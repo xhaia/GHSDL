@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Commons.h"
 #include <string>
+#include "LevelMap.h"
 using namespace std;
 #ifndef _CHARACTER_H
 #define _CHARACTER_H
@@ -32,8 +33,11 @@ protected:
 
 	float m_collision_radius;
 
+private:
+	LevelMap* m_current_level_map;
+
 public:
-	Character(SDL_Renderer* renderer, string imagePath, Vector2D start_position);
+	Character(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map);
 	~Character();
 
 	virtual void Render();

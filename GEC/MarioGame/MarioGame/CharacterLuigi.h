@@ -1,6 +1,7 @@
 #pragma once
 #include "Character.h"
 #include <SDL.h>
+#include "LevelMap.h"
 using namespace std;
 #ifndef _CHARACTERLUIGI_H
 #define _CHARACTERLUIGI_H
@@ -29,7 +30,7 @@ protected:
 	float m_collision_radius;
 
 public:
-	CharacterLuigi(SDL_Renderer* renderer, string imagePath, Vector2D start_position);
+	CharacterLuigi(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map);
 	~CharacterLuigi();
 
 	virtual void Render();

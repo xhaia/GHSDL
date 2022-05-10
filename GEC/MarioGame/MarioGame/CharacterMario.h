@@ -1,5 +1,6 @@
 #pragma once
 #include "Character.h"
+#include "LevelMap.h"
 #include <SDL.h>
 using namespace std;
 #ifndef _CHARACTERMARIO_H
@@ -29,7 +30,7 @@ protected:
 	float m_collision_radius;
 
 public:
-	CharacterMario(SDL_Renderer* renderer, string imagePath, Vector2D start_position);
+	CharacterMario(SDL_Renderer* renderer, string imagePath, Vector2D start_position, LevelMap* map);
 	~CharacterMario();
 
 	virtual void Render();
