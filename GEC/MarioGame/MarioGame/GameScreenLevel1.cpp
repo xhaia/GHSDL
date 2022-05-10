@@ -11,7 +11,7 @@ using namespace std;
 GameScreenLevel1::GameScreenLevel1(SDL_Renderer* renderer) : GameScreen(renderer)
 {
 	SetUpLevel();
-	m_level_map = nullptr;
+	LevelMap* m_level_map = nullptr;
 }
 
 GameScreenLevel1::~GameScreenLevel1()
@@ -53,7 +53,7 @@ bool GameScreenLevel1::SetUpLevel()
 {
 	//draw the background
 	m_background_texture = new Texture2D(m_renderer);
-	if (!m_background_texture->LoadFromFile("Images/test.bmp"))
+	if (!m_background_texture->LoadFromFile("Images/BackGroundMB.png"))
 	{
 		cout << "Failed to load background texture!" << endl;
 		return false;
