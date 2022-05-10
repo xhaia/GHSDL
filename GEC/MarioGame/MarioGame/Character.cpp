@@ -25,7 +25,6 @@ Character::Character(SDL_Renderer* renderer, string imagePath, Vector2D start_po
 		cout << "Failed to load character texture!" << endl;
 	}
 
-	m_collision_radius = 15.0f;
 }
 
 

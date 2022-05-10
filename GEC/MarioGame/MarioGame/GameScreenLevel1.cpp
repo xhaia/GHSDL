@@ -1,7 +1,9 @@
 #include "GameScreenLevel1.h"
 #include "Texture2D.h"
 #include "Collisions.h"
+#include "Commons.h"
 #include "LevelMap.h"
+#include "Character.h"
 #include <iostream>
 using namespace std;
 
@@ -22,6 +24,7 @@ GameScreenLevel1::~GameScreenLevel1()
 
 	delete Luigi;
 	Luigi = nullptr;
+
 }
 
 void GameScreenLevel1::Render()

@@ -23,6 +23,8 @@ CharacterMario::CharacterMario(SDL_Renderer* renderer, string imagePath, Vector2
 	{
 		cout << "Failed to load character texture!" << endl;
 	}
+
+	m_collision_radius = 15.0f;
 }
 
 CharacterMario::~CharacterMario()

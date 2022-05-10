@@ -6,6 +6,7 @@
 #include "Commons.h"
 #include <string>
 #include "LevelMap.h"
+#include "Texture2D.h"
 using namespace std;
 #ifndef _CHARACTER_H
 #define _CHARACTER_H
@@ -46,6 +47,7 @@ public:
 	Vector2D GetPosition();
 
 	float GetCollisionRadius();
+	Rect2D GetCollisionBox() { return Rect2D(m_position.x, m_position.y, m_texture->GetWidth(), m_texture->GetHeight()); }
 };
 
 #endif _CHARACTER_H
